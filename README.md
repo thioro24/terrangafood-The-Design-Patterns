@@ -85,3 +85,17 @@ terrangafood/
 ## Licence
 
 Projet pédagogique — Usage académique uniquement.
+## 🚀 Démarrage rapide - Fatou Sylla (DO)
+
+### Prérequis
+- Node.js 20 LTS
+- Git
+
+### Installation
+```bash
+git clone https://github.com/thioro24/terrangafood-The-Design-Patterns
+cd terrangafood-The-Design-Patterns
+
+cd api && npm install && cd ..
+cd web && npm install
+copy .env.example .env
