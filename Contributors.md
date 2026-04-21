@@ -8,4 +8,4 @@
 | **Khadija** |  |  |
 | **Fatou Sylla** |  |  |
 | **Fatou Sy** |  |  |
-| **Alima** | DP | alimaS2025 |
+| **Alima** | DB | alimaS2025 |
