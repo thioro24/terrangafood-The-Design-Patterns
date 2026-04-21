@@ -7,5 +7,5 @@
 | **Thioro** | CP | thioro24 |
 | **Khadija** |  |  |
 | **Fatou Sylla** |  |  |
-| **Fatou Sy** |  |  |
+| **Fatou Sy** | DF  | fatou-art |
 | **Alima** | DB | alimaS2025 |
