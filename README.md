@@ -1,4 +1,4 @@
-# 🍛 TerrangaFood
+# 🍛 TerrangaFood-The Design Patterns
 
 Plateforme de commande de plats auprès de restaurants dakarois.
 
@@ -24,8 +24,8 @@ Plateforme de commande de plats auprès de restaurants dakarois.
 
 ```bash
 # Cloner le dépôt
-git clone https://github.com/[votre-pseudo]/terrangafood-[equipe].git
-cd terrangafood-[equipe]
+git clone https://github.com/[nom pseudo]/terrangafood-[nom equipe].git
+cd terrangafood-[nom equipe]
 
 # Configurer les variables d'environnement
 cp .env.example .env
