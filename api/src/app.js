@@ -1,3 +1,8 @@
+/**
+ * Fichier principal de l'API TerrangaFood.
+ * Configure le middleware, les routes et la connexion à la base de données.
+ */
+ 
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
