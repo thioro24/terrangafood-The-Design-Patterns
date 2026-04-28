@@ -45,3 +45,32 @@ export async function getPlats() {
   }
   return res.json();
 }
+// === COMMANDES ===
+export async function creerCommande(commande) {
+  const res = await fetch(`${API_URL}/commandes`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(commande),
+  });
+  if (!res.ok) {
+    const erreur = await res.json();
+    throw new Error(erreur.message || 'Erreur commande');
+  }
+  return res.json();
+}
+
+export async function getCommandes() {
+  const res = await fetch(`${API_URL}/commandes`, { 
+    cache: 'no-store' 
+  });
+  if (!res.ok) throw new Error('Impossible de récupérer les commandes');
+  return res.json();
+}
+
+export async function getCommande(id) {
+  const res = await fetch(`${API_URL}/commandes/${id}`, { 
+    cache: 'no-store' 
+  });
+  if (!res.ok) throw new Error('Commande non trouvée');
+  return res.json();
+}

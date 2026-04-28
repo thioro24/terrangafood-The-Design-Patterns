@@ -332,3 +332,20 @@ a:hover {
   margin-top: 60px;
   font-size: 0.9rem;
 }
+/* Commandes */
+.commande-form { 
+  background: var(--surface); 
+  border-radius: var(--radius); 
+  padding: 32px; 
+  box-shadow: var(--shadow); 
+}
+.plat-checkbox {
+  display: flex; align-items: center; gap: 10px; 
+  padding: 12px; border: 1px solid var(--border); 
+  border-radius: 8px; cursor: pointer; 
+}
+.statut-badge {
+  padding: 4px 12px; border-radius: 20px; 
+  font-size: 0.8rem; font-weight: 600; 
+}
+.statut-en-attente { background: #FEF3C7; color: #92400E; }
