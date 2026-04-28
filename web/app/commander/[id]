@@ -1,0 +1,47 @@
+import Link from 'next/link';
+import CommandeForm from '../../../components/CommandeForm';
+import { getRestaurant, getPlatsByRestaurant } from '../../../lib/api';
+
+export default async function CommanderPage({ params }) {
+  const { id } = params;
+  let restaurant = null;
+  let plats = [];
+  let error = null;
+
+  try {
+    // Récupération des données en parallèle (Server Side)
+    const [resData, platsData] = await Promise.all([
+      getRestaurant(id),
+      getPlatsByRestaurant(id)
+    ]);
+    restaurant = resData;
+    plats = platsData;
+  } catch (err) {
+    error = err.message;
+  }
+
+  if (error || !restaurant) {
+    return (
+      <div className="commande-page">
+        <Link href="/" className="back-link">← Retour aux restaurants</Link>
+        <div className="error">
+          {error || 'Restaurant non trouvé'}
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="commande-page">
+      <Link href={`/restaurants/${id}`} className="back-link">
+        ← Retour au menu
+      </Link>
+      
+      {/* On passe les données au Client Component */}
+      <CommandeForm 
+        restaurant={restaurant} 
+        plats={plats.filter(p => p.disponible)} 
+      />
+    </div>
+  );
+}
